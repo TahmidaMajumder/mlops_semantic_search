@@ -221,44 +221,43 @@ json.loads(response.text)
 ```
 ```
 
-
-
 ## 📊 Data Flow
 
-1. **YouTube API** → Raw video metadata
-2. **YouTube Transcript API** → Video transcripts
-3. **Data Processing** → Cleaned and formatted data
-4. **Sentence Transformers** → Semantic embeddings (384 dimensions each for title & transcript)
-5. **FastAPI** → Search and query interface
-6. **Semantic Search** → Manhattan distance similarity matching
-7. **Docker** → Containerized deployment
-8. **GCP** → Cloud hosting
+1. YouTube API → Raw video metadata
+2. YouTube Transcript API → Video transcripts
+3. Data Processing→ Cleaned and formatted data
+4. Sentence Transformers → Semantic embeddings (384 dimensions each for title & transcript)
+5. FastAPI → Search and query interface
+6. Semantic Search → Manhattan distance similarity matching
+7. Docker → Containerized deployment
+8. GCP → Cloud hosting
 
 ## 🔍 Semantic Search Features
 
 The API implements advanced semantic search capabilities:
 
-- **Embedding Model**: Uses `all-MiniLM-L6-v2` for high-quality text embeddings
-- **Distance Metric**: Manhattan distance for similarity calculation
-- **Dual Search**: Searches both video titles and transcript content
-- **Smart Filtering**: Threshold-based filtering (distance < 40) for relevant results
-- **Top-K Results**: Returns top 5 most relevant videos
-- **Real-time**: Fast search using pre-computed embeddings
+- Embedding Model: Uses all-MiniLM-L6-v2 for high-quality text embeddings
+- Distance Metric: Manhattan distance for similarity calculation
+- Dual Search: Searches both video titles and transcript content
+- Smart Filtering: Threshold-based filtering (distance < 40) for relevant results
+- Top-K Results: Returns top 5 most relevant videos
+- Real-time: Fast search using pre-computed embeddings
+
 
 ### Search Algorithm
 
-1. **Query Embedding**: Converts search query to vector representation
-2. **Distance Calculation**: Computes Manhattan distance between query and all videos
-3. **Threshold Filtering**: Filters results below similarity threshold
-4. **Ranking**: Sorts by relevance score
-5. **Top-K Selection**: Returns best 5 matches with titles and video IDs
+- Query Embedding: Converts search query to vector representation
+- Distance Calculation: Computes Manhattan distance between query and all videos
+- Threshold Filtering: Filters results below similarity threshold
+- Ranking: Sorts by relevance score
+- Top-K Selection: Returns best 5 matches with titles and video IDs
 
 ## 🔄 Automation Features
 
-- **Scheduled Updates**: Daily pipeline execution
-- **Change Detection**: Only commits when new data is available
-- **Error Handling**: Graceful handling of missing transcripts
-- **Logging**: Detailed timing and progress information
+- Scheduled Updates: Daily pipeline execution
+- Change Detection: Only commits when new data is available
+- Error Handling: Graceful handling of missing transcripts
+- Logging: Detailed timing and progress information
 
 ## 🤝 Contributing
 
@@ -321,22 +320,20 @@ docker run -p 8080:8080 nameofthecontainer
 ### Google Cloud Platform (GCP)
 The application is designed for GCP deployment:
 
-1. **Cloud Run**: Deploy the Docker container
-2. **Cloud Build**: Automated builds from GitHub
-3. **Cloud Storage**: Store parquet files
-4. **Cloud Scheduler**: Schedule ETL pipeline runs
+Follow the below intruction for continious feployment from Github Repo:
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_1.png)
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_2.png)
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_3.png)
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_4.png)
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_5.png)
 
-**Example GCP deployment:**
-```bash
-# Build and push to Google Container Registry
-docker build -t gcr.io/your-project/youtube-etl-api .
-docker push gcr.io/your-project/youtube-etl-api
+**GCP deployment Check:**
+Use the url to check
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_6.png)
 
-# Deploy to Cloud Run
-![Screenshot 2025-07-03 112555](https://github.com/user-attachments/assets/016f6442-b979-473c-ad4b-3cb1ef2a0ec7)
-[Screenshot 2025-07-03 111946](https://github.com/user-attachments/assets/f5012329-d6c9-4f8b-b07b-b32328bdb265)
+ADD search query "pca" with url
+![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_7.png)
 
-```
 
 ## 🚧 Status
 
