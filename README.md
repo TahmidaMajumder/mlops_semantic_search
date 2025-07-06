@@ -332,6 +332,7 @@ Use the url to check
 ![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_6.png)
 
 ADD search query "pca" with url
+
 ![image alt](https://github.com/TahmidaMajumder/mlops_semantic_search/blob/1200b157e79defd869e8302b2ac64fe6176fab27/GCP_7.png)
 
 
