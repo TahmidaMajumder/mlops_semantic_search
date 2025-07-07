@@ -13,6 +13,14 @@ This project creates an automated data pipeline that:
 - Runs automated updates via GitHub Actions
 - Deploys using Docker and Google Cloud Platform
 
+<h2 align="center">📺 Demo Video</h2>
+
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=dLFiNk6YksA" target="_blank">
+    <img src="https://img.youtube.com/vi/dLFiNk6YksA/0.jpg" alt="Watch the demo" />
+  </a>
+</p>
+
 ## 📁 Project Structure
 
 ```
