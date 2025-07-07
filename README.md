@@ -219,7 +219,6 @@ json.loads(response.text)
   'FgakZw6K1QQ',
   'ccjrsxXmfnw']}
 ```
-```
 
 ## 📊 Data Flow
 
@@ -270,10 +269,10 @@ The API implements advanced semantic search capabilities:
 ## 📋 Configuration
 
 ### Docker Configuration
-- **Base Image**: `python:3.10-slim` for optimized size
-- **Working Directory**: `/code`
-- **Port**: 8080 (production ready)
-- **Host**: `0.0.0.0` (accepts external connections)
+- Base Image: `python:3.10-slim` for optimized size
+- Working Directory: `/code`
+- Port: 8080 (production ready)
+- Host: `0.0.0.0` (accepts external connections)
 
 ### Environment Variables
 - `YT_API_KEY`: YouTube Data API v3 key
