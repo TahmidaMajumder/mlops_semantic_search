@@ -356,7 +356,7 @@ ADD search query "pca" with url
 - Transcript processing and text cleaning
 - 384-dimensional semantic embeddings
 - Manhattan distance similarity search
-- RESTful API with health checks
+- Fast API with health checks
 - Dockerized deployment
 - Production-ready configuration
 
